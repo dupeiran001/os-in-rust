@@ -2,11 +2,15 @@
 
 members = [
     "freestanding_binary",
+    "minimal_kernal",
+    "VGA_text_mode",
+    "test_framework",
+    "CPU_exceptions",
 ]
 
 
-[profile.dev]
-panic = "abort"
+#[profile.dev]
+#panic = "abort"
 
-[profile.release]
-panic = "abort"
+#[profile.release]
+#panic = "abort"
