@@ -5,6 +5,7 @@
 #![test_runner(crate::test_runner)]
 #![reexport_test_harness_main = "test_main"]
 
+pub mod gdt;
 pub mod interrupts;
 pub mod serial;
 pub mod vga_buffer;
@@ -74,4 +75,5 @@ pub fn exit_qemu(exit_code: QemuExitCode) {
 
 pub fn init() {
     interrupts::init_idt();
+    gdt::init();
 }
